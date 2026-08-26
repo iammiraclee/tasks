@@ -26,52 +26,42 @@ function App(): React.JSX.Element {
             <div>
                 <Button
                     onClick={() => {
-                        console.log("Hello World");
+                        console.log("Hello World!");
                     }}
                 >
                     Log Hello World
                 </Button>
             </div>
             <div>
-                <Container>
-                    <Row>
-                        <Col>
-                            <div
-                                style={{
-                                    width: "50px",
-                                    height: "25px",
-                                    backgroundColor: "red",
-                                }}
-                            ></div>
-                            <div>
-                                Unordered List:
-                                <ul>
-                                    <li>One</li>
-                                    <li>two</li>
-                                    <li>three</li>
-                                </ul>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div
-                                style={{
-                                    width: "50px",
-                                    height: "25px",
-                                    backgroundColor: "red",
-                                }}
-                            ></div>
-                            <div>
-                                Ordered List
-                                <ol>
-                                    <li>a</li>
-                                    <li>b</li>
-                                    <li>c</li>
-                                </ol>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+                Unordered List:
+                <ul>
+                    <li>One</li>
+                    <li>two</li>
+                    <li>three</li>
+                </ul>
             </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <div
+                            style={{
+                                width: "50px",
+                                height: "25px",
+                                backgroundColor: "red",
+                            }}
+                        ></div>
+                    </Col>
+                    <Col>
+                        <div
+                            style={{
+                                width: "50px",
+                                height: "25px",
+                                backgroundColor: "red",
+                            }}
+                        ></div>
+                    </Col>
+                </Row>
+            </Container>
             <p>
                 Hello World Edit <code>src/App.tsx</code> and save. This page
                 will automatically reload.
