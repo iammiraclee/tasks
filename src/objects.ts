@@ -59,9 +59,8 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
-    return "";
+    return `${question.id}: ${question.name.slice(0, 10)}`;
 }
-
 /**
  * Consumes a question and returns a formatted string representation as follows:
  *  - The first line should be a hash sign, a space, and then the `name`
