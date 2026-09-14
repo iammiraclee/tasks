@@ -8,9 +8,18 @@ import { Question, QuestionType } from "./interfaces/question";
 export function makeBlankQuestion(
     id: number,
     name: string,
-    type: QuestionType
+    type: QuestionType,
 ): Question {
-    return {};
+    return {
+        id: id,
+        name: name,
+        type: type,
+        body: "",
+        expected: "",
+        options: [],
+        points: 1,
+        published: false,
+    };
 }
 
 /**
@@ -21,13 +30,19 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+    if (
+        answer.toLowerCase().trim() === question.expected.toLowerCase().trim()
+    ) {
+        return true;
+    }
     return false;
 }
 
 /**
  * Consumes a question and a potential `answer`, and returns whether or not
  * the `answer` is valid (but not necessarily correct). For a `short_answer_question`,
- * any answer is valid. But for a `multiple_choice_question`, the `answer` must
+ * any answer is valid. But for
+ * a `multiple_choice_question`, the `answer` must
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
@@ -115,7 +130,7 @@ export function mergeQuestion(
     id: number,
     name: string,
     contentQuestion: Question,
-    { points }: { points: number }
+    { points }: { points: number },
 ): Question {
     return contentQuestion;
 }
