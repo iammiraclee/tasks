@@ -16,7 +16,7 @@ export function makeBlankQuestion(
         type: type,
         body: "",
         expected: "",
-        options: [],
+        options: [] as string[],
         points: 1,
         published: false,
     };
