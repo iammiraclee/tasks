@@ -259,7 +259,7 @@ export function duplicateQuestionInArray(
         result.push(question);
 
         if (question.id === targetId) {
-            result.push(duplicateQuestion(question, newId));
+            result.push(duplicateQuestion(newId, question));
         }
     });
 
